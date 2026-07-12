@@ -9,18 +9,18 @@
     <title>Islamic Education Centre</title>
 
     <!-- css link -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
     <!--header-->
-    <header>
-
+    <header class="main-header">
+        <div class="nav-container">
         <h1>Islamic Education Centre</h1>
-
-        <nav>
+        
+        <nav class="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="prayer.html">Prayer Times</a>
@@ -30,36 +30,55 @@
             <a href="feedback.html">Feedback</a>
             <a href="contact.html">Contact Us</a>
         </nav>
-
+        </div>
     </header>
 
     <!--hero section-->
-    <section class="hero">
+    <section class="hero-section">
+    <div class="hero-overlay">
+        <div class="accessibility">
+            <h3>♿ Accessibility</h3>
+            <button onclick="readPage()">📢 Read Page</button>
+            <button onclick="stopReading()">⏹️ Stop</button>
+        </div>
+       
+        <div class="hero-content">
         <h2>Welcome to the Islamic Education Centre</h2>
         <p>
-            The House of Allah.
+            Nurturing faith, knowledge and community unity in accordance with authentic teachings.
         </p>
         <a href="prayer.html" class="button">Prayer Times</a>
         <a href="contact.html" class="button">Contact Us</a>
+        </div>
+
+    </div>
     </section>
 
     <!--about preview-->
-    <section>
+    <section class="about-section">
+        <div class="content-container">
         <h2>About Our Centre</h2>
+        <div class="title-underline"></div>
         <p>
             The Islamic Education Centre is a welcoming musallah that provides daily prayers, Islamic education and community events. Everyone is welcome to join us.
         </p>
+        </div>
     </section>
 
     <!--prayer times-->
-    <section>
+    <section class="prayer-section">
+        <div class="content-container">
         <h2>Today's Prayer Times</h2>
-        <table>
+        <div class="title-underline"></div>
+
+        <table class="prayer-table">
+        <thead>
             <tr>
                 <th>Prayer</th>
                 <th>Times</th>
             </tr>
-
+        </thead>
+        <tbody>
             <tr>
                 <td>Fajr</td>
                 <td>5:15 AM</td>
@@ -84,26 +103,55 @@
                 <td>Isha</td>
                 <td>7:40 PM</td>
             </tr>
-
+        </tbody>
         </table>
+        </div>
     </section>
 
     <!--our services-->
-    <section>
+    <section class="services-section">
+        <div class="content-container">
         <h2>Our Services</h2>
-        <ul>
-            <li>Five Daily Prayers</li>
-            <li>Friday Jummah Prayer</li>
-            <li>Community Events</li>
-        </ul>
+        <div class="title-underline"></div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>🕌 Five Daily Prayers</h3>
+                <p>Congregational prayers held daily in a peaceful, dedicated environment.</p>
+            </div>
+            <div class="service card">
+                <h3>🤝 Friday Jummah Prayer</h3>
+                <p>Weekly khutbah and prayer connecting the local community unity.</p>
+            </div>
+            <div class="service-card">
+                <h3>🌍 Community Events</h3>
+                <p>Educational programs, gatherings, and events for all age groups.</p>
+            </div>
+        </div>
+        
+        </div>
     </section>
 
     <!--announcements-->
-    <section>
-        <h2>Latest Announcements</h2>
-        <h2>Make sure to park in designated areas</h2>
-        <h2>Jummah this coming friday starts 1:15 PM</h2>
-        <h2>Community events are held every month, make sure to donate at musallah</h2>
+    <section class="announcements-section">
+        <div class="content-container">
+            <h2>Latest Announcements</h2>
+            <div class="title-underline"></div>
+            <div class="announcements-feed">
+                <div class="announcement-item danger-notice">
+                    <span class="announcement-tag">Parking</span>
+                    <p>Make sure to park in designated areas only to respect our neighbours.</p>
+                </div>
+                <div class="announcement-item dynamic-notice">
+                    <span class="announcement-tag">Prayer</span>
+                    <p>Jummah this coming Friday starts exactly at 1:15 PM</p>
+                </div>
+                <div class="announcement-item general-notice">
+                    <span class="announcement-tag">Community</span>
+                    <p>Community events are held every month. Make sure to donate at musallah!</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!--image-->

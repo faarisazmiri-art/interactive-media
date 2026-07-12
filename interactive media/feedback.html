@@ -9,7 +9,7 @@
     <title>Feedback</title>
 
     <!-- css link -->
-    <link rel="stylesheet" href="css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -34,19 +34,26 @@
     </header>
 
     <section>
+
+        <div class="accessibility">
+            <h3>♿ Accessibility</h3>
+            <button onclick="readPage()">📢 Read Page</button>
+            <button onclick="stopReading()">⏹️ Stop</button>
+        </div>
+
         <h2>Feedback</h2>
         <p>We value your feedback.</p>
 
-        <form>
+        <form onsubmit="return validateFeedback()">
 
             <label>Name</label><br>
-            <input type="text"><br><br>
+            <input type="text" id="feedbackName"><br><br>
 
             <label>Email</label><br>
             <input type="email"><br><br>
 
             <label>Comments</label><br>
-            <textarea rows="6"></textarea><br><br>
+            <textarea id="comment"></textarea><br><br>
             <input type="submit" value="Submit" onclick="submitForm()">
 
         </form>

@@ -1,0 +1,340 @@
+/*body*/
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+/*header*/
+header {
+    background-color: darkgreen;
+    color: whitesmoke;
+    text-align: center;
+    padding: 20px;
+}
+
+/*nav bar*/
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: whitesmoke;
+    margin: 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: gold;
+}
+
+/*hero section*/
+.hero-section {
+    position: relative;
+    background-image: url('mosuqe\ int.png');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/*overlay which darkens*/
+.hero-overlay {
+    background-color: rgba(12, 57, 36, 0.75) !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}
+
+/*centered content*/
+.hero.content {
+    max-width: 800px;
+    padding: 20px;
+    color: whitesmoke;
+}
+
+.hero-content h2{
+    color: whitesmoke;
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.hero-content p{
+    font-size: 1.2rem;
+    color: whitesmoke
+}
+
+/*buttons*/
+.button {
+    background-color: gold;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.button:hover {
+    background-color: orange;
+}
+
+/*sections*/
+section {
+    background-color:whitesmoke;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/*headings*/
+h2 {
+    color: darkgreen;
+}
+
+/*prayer table*/
+table {
+    width: 100%;
+    max-width: 700px;
+    margin: 30px;
+    border-collapse: collapse;
+    box-shadow: 0 4px 12px rgba( 0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+th {
+    background-color: darkgreen;
+    color: whitesmoke;
+    padding: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+td {
+    padding: 14px;
+    text-align: center;
+    color: #444444;
+    border-bottom: 1px solid #eeeeee;
+    background-color: #ffffff;
+}
+
+table tbody tr:hover td{
+    background-color: #f1ede4;
+}
+
+/*section control*/
+.services-section {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.announcements-section {
+    padding: 60px 0;
+    background-color: #fcfbf7;
+}
+
+/*service grid layout*/
+.service-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 30px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: right;
+}
+
+/*service card blocks*/
+.service-card {
+    flex: 1;
+    background-color: #ffffff !important;
+    padding: 25px !important;
+    border-radius: 8px !important;
+    border-top: 4px solid #0c3924 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+    text-align: left !important;
+}
+
+service-card:hover {
+    transform: translateY(-5px)
+}
+
+.service-card h3 {
+    color: #0c3924 !important;
+    font-size: 1.25rem !important;
+    margin-bottom: 12px !important;
+    margin-top: 0 !important;
+}
+
+.service-card p{
+    color: #555555 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+}
+
+/*announcement set up*/
+.announcement-feed {
+    max-width: 700px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/*indiv announcement bar items*/
+.announcement-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 6px;
+    border-left: 5px solid #0c3924;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    text-align: left;
+}
+
+/*notive types based on urgency*/
+.announcement-item.danger-notice { border-left-color: #d9534f;}
+.announcement-item.dynamic-notice { border-left-color: #dfb76c;}
+
+.announcement-tag {
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: #eeeeee;
+    color: #555555;
+    letter-spacing: 0.5px;
+}
+
+.announcement-item p {
+    margin: 0 !important;
+    color: #222222;
+    font-size: 1.05rem !important;
+    text-align: left !important;
+}
+
+.announcement-item h2,
+.announcement-item h3 {
+    color: #0c3924;
+    margin: 0 !important;
+}
+
+/*adaptability to diff devices*/
+@media (max-width: 768px) {
+    .service-grid {
+        flex-direction: column;
+    }
+    .announcement-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+} 
+
+/*images*/
+img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/*forms*/
+form {
+    width: 60%;
+    margin: auto;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+input[type="submit"] {
+    background-color: darkgreen;
+    color: whitesmoke;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background-color: green;
+}
+
+/*footer*/
+footer {
+    background-color: darkgreen;
+    color: whitesmoke;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/*mobile view*/
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+    form {
+        width: 90%;
+    }
+    .hero {
+        padding: 30px;
+    }
+}
+
+/*gallery images*/
+section img{
+    margin: 10px;
+}
+
+.map {
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+.accessibility {
+    background-color: whitesmoke;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.accessibility h3 {
+    margin-top: 0;
+    color: #2e8b57;
+}
+
+.accessibility button {
+    background-color: #2e8b57;
+    color: whitesmoke;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.accessibility button:hover {
+    background-color: #1b5e20;
+}

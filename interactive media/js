@@ -1,0 +1,53 @@
+/*welcome msg*/
+console.log("Welcome to the Islamic Education Centre");
+
+/*booking true/false*/
+function validateBooking() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+
+    if (name == "" , email == "") {
+        alert("Please enter your name and email.");
+        return false;
+    }
+    alert("Your booking has been submitted!");
+    return true;
+}
+
+/*contact form true/false*/
+function validateContact() {
+    let name = document.getElementById("contactName").value;
+    let email = document.getElementById("contactEmail").value;
+    let message = document.getElementById("message").value;
+
+    if (name == "" , email == "" , message == "") {
+        alert("Please complete all the fields.");
+        return false;
+    }
+    alert("Your message has been sent!")
+}
+
+/*feedback form true/false*/
+function validateFeedback() {
+    let name = document.getElementById("feedbackName").value;
+    let comment = document.getElementById("comment").value;
+
+    if (name == "" , comment == "") {
+        alert("Please complete all the fields.");
+        return false;
+    }
+    alert("Thank you for your feedback!")
+}
+
+/*accessibility*/
+function readPage() {
+    let speech = new SpeechSynthesisUtterance(document.body.innerText);
+    speech.lang = "en-AU";
+    speech.rate = 0.9
+    speech.pitch = 1;
+    speechSynthesis.speak(speech);
+}
+
+function stopReading() {
+    speechSynthesis.cancel();
+}

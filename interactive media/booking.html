@@ -9,7 +9,7 @@
     <title>Booking</title>
 
     <!-- css link -->
-    <link rel="stylesheet" href="css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -34,16 +34,24 @@
     </header>
 
     <section>
+
+        
+        <div class="accessibility">
+            <h3>♿ Accessibility</h3>
+            <button onclick="readPage()">📢 Read Page</button>
+            <button onclick="stopReading()">⏹️ Stop</button>
+        </div>
+
         <h2>Book to be the Jummah Imam</h2>
         <p>Complete the form below if you would like to lead an upcoming Jummah Prayer</p>
 
-        <form>
+        <form onsubmit="return validateBooking()">
 
             <label>Full Name</label><br>
-            <input type="text"><br><br>
+            <input type="text" id="name"><br><br>
 
             <label>Email</label><br>
-            <input type="email"><br><br>
+            <input type="email" id="email"><br><br>
 
             <label>Phone Number</label><br>
             <input type="tel"><br><br>
