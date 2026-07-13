@@ -183,7 +183,7 @@ table tbody tr:hover td{
     text-align: left !important;
 }
 
-service-card:hover {
+.service-card:hover {
     transform: translateY(-5px)
 }
 
@@ -551,4 +551,276 @@ section img{
 /**clean bottom boundary border**/
 .styled-table tbody tr:last-of-type {
     border-bottom: 2px solid #0c3924;
+}
+
+/**layout spacing for prayer table**/
+.prayer-times-section {
+    padding: 60px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.prayer-times-section h2 {
+    font-size: 2rem;
+    color: #0c3924;
+    margin-bottom: 5px;
+}
+
+/**responsive container to adapt to smaller devices**/
+.table-responsive {
+    width: 100%;
+    max-width: 750px;
+    margin: 35px auto 0 auto;
+    overflow-x: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    border-radius: 8px;
+}
+
+/**table formatting**/
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    font-size: 1.05rem;
+    text-align: left;
+}
+
+/**header design**/
+.styled-table tr {
+    background-color: #0c3924;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 16px 24px;
+}
+
+/**bold first col elements**/
+.styled-table tbody td:first-child {
+    color: #0c3924;
+    font-weight: 600;
+    width: 50%;
+}
+
+/**style second col elements**/
+.styled-table tbody td:last-child {
+    color: #333333;
+    font-weight: 500;
+    width: 50%;
+}
+
+/**add clean separating lines between grid**/
+.styled-table tbody td {
+    border-bottom: 1px solid #eeeeee;
+}
+
+/**hover effect**/
+.styled-table tbody tr:hover {
+    background-color: #fcfbf7;
+}
+
+/**bottom table line thingy**/
+.styled-table tbody tr:last-of-type {
+    border-bottom: 3px solid #0c3924;
+}
+
+/**div which has both informational items side by side**/
+.jummah-reminder-section {
+    padding: 50px 0 80px 0;
+    background-color: #fcfbf7;
+}
+
+/**div layout**/
+.jummah-reminder-section .content-container {
+    display: flex;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 30px;
+    justify-content: center;
+}
+
+/**card blocks**/
+.prayer-card {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    border: 1px solid #eaeaea;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+/**thingy separating card categories**/
+.jummah-card {
+    border-top: 4px solid #0c3924;
+}
+
+.reminder-card {
+    border-top: 4px solid #dfb76c;
+}
+
+.prayer-card h3 {
+    color: #0c3924;
+    font-size: 1.35rem;
+    margin: 0 0 12px 0;
+}
+
+/**separater line under heading**/
+.card-underline {
+    width: 40px;
+    height: 3px;
+    background-color: #dfb76c;
+    margin-bottom: 20px;
+    border-radius: 2px;
+}
+
+.time-badge-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.time-badge {
+    background-color: #f0f5f2;
+    color: #0c3924;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    border: 1px solid rgba(12, 57, 36, 0.08);
+}
+
+.card-description {
+    color: #555555;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 1rem;
+}
+
+/**list decor**/
+.reminder-list {
+    margin: 0;
+    padding-left: 20px;
+    color: #555555;
+}
+
+.reminder-list li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+    font-size: 0.98rem;
+}
+
+.reminder-list li:last-child {
+    margin-bottom: 0;
+}
+
+/**mobile adaptability scaling**/
+@media (max-width: 768px) {
+    .jummah-reminder-section .content-container {
+        flex-direction: column;
+        gap: 20px
+    }
+}
+
+/**background padding to make it look better**/
+.booking-section {
+    padding: 60px 20px;
+    background-color: #fcfbf7;
+    display: flex;
+    justify-content: center;
+}
+
+/**form card config**/
+.form-container {
+    width: 100%;
+    max-width: 650ppx;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.04);
+    border: 1px solid #eaeaea;
+    box-sizing: border-box;
+}
+
+.form-container h2 {
+    color: #0c3924;
+    font-size: 1.8rem;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.form-subtitle {
+    color: #666666;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/**layout spacing**/
+.form-group label {
+    margin-bottom: 22px;
+    text-align: left;
+}
+
+/**alignment config for input elements**/
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #0c3924;
+    font-size: 0.95rem;
+}
+
+/**text fields and areas style**/
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="tel"],
+.form-container input[type="date"],
+.form-container textarea {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #333333;
+    box-sizing: border-box;
+}
+/**responsice glow**/
+.form-container input:focus {
+    outline: none;
+    border-color: #0c3924;
+    box-shadow: 0 0 0 3px rgba(12, 57, 36, 0.1);
+    background-color: #fbfdfc;
+}
+
+/**textarea customisation settings**/
+.form-container textarea {
+    resize: vertical;
+    font-family: inherit;
+}
+
+/**styled submit button**/
+.submit-btn {
+    width: 100%;
+    background-color: #0c3924;
+    color: #ffffff;
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #062014;
+}
+
+.submit-btn:active {
+    transform: scale(0.99);
 }

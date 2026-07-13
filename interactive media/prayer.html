@@ -32,7 +32,7 @@
     </header>
 
     <!--prayer times-->
-    <section>
+    <section class="prayer-times-section">
 
         
         <div class="accessibility">
@@ -40,52 +40,72 @@
             <button onclick="readPage()">📢 Read Page</button>
             <button onclick="stopReading()">⏹️ Stop</button>
         </div>
-
+        <div class="content-container">
         <h2>Daily Prayer Times</h2>
-        <table>
+        <div class="title-underline"></div>
+        <div class="table-responsive">
+        <table class="styled-table">
+            <thead>
             <tr>
-                <th>Prayer</th>
-                <th>Time</th>
+                <th>🕌 Prayer</th>
+                <th>🕒 Time</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><strong>Fajr</strong></td>
+                <td>5:15 AM</td>
             </tr>
 
             <tr>
-                <td>Dhuhr</td>
+                <td><strong>Dhuhr</strong></td>
                 <td>12:20 PM</td>
             </tr>
 
             <tr>
-                <td>Asr</td>
+                <td><strong>Asr</strong></td>
                 <td>3:45 PM</td>
             </tr>
 
             <tr>
-                <td>Maghrib</td>
+                <td><strong>Maghrib</strong></td>
                 <td>6:08 PM</td>
             </tr>
 
             <tr>
-                <td>Isha</td>
+                <td><strong>Isha</strong></td>
                 <td>7:40 PM</td>
             </tr>
+            </tbody>
         </table>
+        </div>
+        </div>
     </section>
 
     <!--jummah-->
-    <section>
-        <h2>Friday Jummah Prayer</h2>
-        <p><strong>Khutbah:</strong>1:15 PM</p>
-        <p><strong>Prayer:</strong>1:30 PM</p>
-        <p>
-            Everyone is welcome to attend our Friday Jummah prayer.
-        </p>
-    </section>
+    <section class="jummah-reminder-section">
+        <div class="content-container">
+            <div class="prayer-card jummah-card">
+                <h3>🕌 Friday Jummah Prayer</h3>
+                <div class="card-underline"></div>
+                <div class="time-badge-container">
+                    <div class="time-badge"><strong>Khutbah:</strong> 1:15 PM</div>
+                    <div class="time-badge"><strong>Prayer:</strong> 1:30 PM</div>
+                </div>
+                <p class="card-description">Everyone is welcome to attend our weekly Friday Jummah prayer and khutbah.</p>
+            </div>
 
     <!--reminder-->
-    <section>
-        <h2>Prayer Reminder</h2>
-        <p>
-            Please arrive before Khutbah, switch phones off or turn silent, and park in designated areas.
-        </p>
+            <div class="prayer-card reminder-card">
+                <h3>⚠️ Prayer Reminder and Etiquette</h3>
+                <div class="card-underline"></div>
+                <ul class="reminder-list">
+                    <li>PLease aim to arrive prior to the start of the Khutbah</li>
+                    <li>Ensure all mobile devices are switched off or turned to complete silent mode</li>
+                    <li>Kindly park only within designated areas to show respected to our local neighbours.</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <!--image-->

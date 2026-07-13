@@ -33,7 +33,7 @@
 
     </header>
 
-    <section>
+    <section class="booking-section">
 
         
         <div class="accessibility">
@@ -42,26 +42,38 @@
             <button onclick="stopReading()">⏹️ Stop</button>
         </div>
 
+        <div class="form-container">
         <h2>Book to be the Jummah Imam</h2>
-        <p>Complete the form below if you would like to lead an upcoming Jummah Prayer</p>
+        <p class="form-subtitle">Complete the form below if you would like to lead an upcoming Jummah Prayer</p>
 
         <form onsubmit="return validateBooking()">
 
-            <label>Full Name</label><br>
-            <input type="text" id="name"><br><br>
+            <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name">
+            </div>
 
-            <label>Email</label><br>
-            <input type="email" id="email"><br><br>
+            <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="name@example.com">
+            </div>
 
-            <label>Phone Number</label><br>
-            <input type="tel"><br><br>
+            <div class="form-group">
+            <label for="tel">Phone Number</label>
+            <input type="tel" id="tel" placeholder="eg., (02) 9000 0000">
+            </div>
 
-            <label>Preferred Friday</label><br>
-            <input type="date"><br><br>
+            <div class="form-group">
+            <label for="date">Preferred Friday</label>
+            <input type="date" id="date">
+            </div>
 
-            <label>Experience</label><br>
-            <textarea rows="5"></textarea><br><br>
-            <input type="submit" value="Submit" onclick="welcomeMessage()">
+            <div class="form-group">
+            <label for="experience">Experience</label>
+            <textarea id="experience" rows="4" placeholder="Briefly detail your experience, for eg, Taraweeh experience, Hafiz, Juz memorisation and etc..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Application</button>
 
         </form>
     </section>
