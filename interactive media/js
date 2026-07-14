@@ -20,7 +20,7 @@ function validateContact() {
     let email = document.getElementById("contactEmail").value;
     let message = document.getElementById("message").value;
 
-    if (name == "" , email == "" , message == "") {
+    if (name == "" || email == "" , message == "") {
         alert("Please complete all the fields.");
         return false;
     }
@@ -32,7 +32,7 @@ function validateFeedback() {
     let name = document.getElementById("feedbackName").value;
     let comment = document.getElementById("comment").value;
 
-    if (name == "" , comment == "") {
+    if (name == "" || comment == "") {
         alert("Please complete all the fields.");
         return false;
     }
