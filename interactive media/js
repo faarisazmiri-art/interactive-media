@@ -7,7 +7,7 @@ function validateBooking() {
     let email = document.getElementById("email").value;
 
     if (name == "" || email == "") {
-        alert("Please enter your name and email.");
+        alert("Please complete all the fields.");
         return false;
     }
     alert("Your booking has been submitted!");
@@ -16,15 +16,20 @@ function validateBooking() {
 
 /*contact form true/false*/
 function validateContact() {
+    if (event) {
+        event.preventDefault();
+    }
+
     let name = document.getElementById("contactName").value;
     let email = document.getElementById("contactEmail").value;
     let message = document.getElementById("message").value;
 
-    if (name == "" || email == "" , message == "") {
+    if (name == "" || email == "" || message == "") {
         alert("Please complete all the fields.");
         return false;
     }
-    alert("Your message has been sent!")
+    alert("Your message has been sent!");
+    return true;
 }
 
 /*feedback form true/false*/
@@ -36,7 +41,8 @@ function validateFeedback() {
         alert("Please complete all the fields.");
         return false;
     }
-    alert("Thank you for your feedback!")
+    alert("Thank you for your feedback!");
+    return true;
 }
 
 /*accessibility*/
