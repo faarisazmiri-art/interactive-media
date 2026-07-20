@@ -57,3 +57,70 @@ function readPage() {
 function stopReading() {
     speechSynthesis.cancel();
 }
+
+/**slideshow for gallery page**/
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    if (slides.length === 0) return;
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "block";
+}
+
+/**auto slide evrry 4s**/
+setInterval(function() {
+    plusSlides(1);
+}, 7000);
+
+/**dropdown filter script**/
+function filterSelection(c) {
+    let x = document.getElementsByClassName("filterDiv");
+    if (c === "all") c="";
+    for (let i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+        if (x[i].className.indexOf(c) > -1) {
+            x[i].style.display = "block";
+        }
+    }
+}
+
+/**modal light box script**/
+function openModal (imgElement) {
+    let modal = document.getElementById("imageModal");
+    let modalImg = document.getElementById("imgModalTarget");
+    let captionText = document.getElementById("modalCaption");
+
+    if (modal && modalImg) {
+        modal.style.display = "block";
+        modalImg.src = imgElement.src;
+        if (captionText) {
+            captionText.innerHTML = imgElement.alt || "";
+        }
+    }
+}
+
+function closeModal() {
+    let modal = document.getElementById("imageModal");
+    if (modal) {
+        modal.style.display = "none";
+    }
+}
+
+/**close when clicking outside pic**/
+window.onclick = function(event) {
+    let modal = document.getElementById("imageModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}

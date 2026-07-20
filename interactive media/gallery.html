@@ -42,7 +42,7 @@
     </header>
 
     <!--gallery-->
-    <section>
+    <main class="gallery-container">
 
         
         <div class="accessibility">
@@ -52,22 +52,99 @@
         </div>
         
         <h2>Photo Gallery</h2>
-        <p>
-            Here are some photos from our musallah and community events.
-        </p>
-    </section>
 
-    <section>
-        image   mosque
-        image    juummah
-        image   taraweeh
-    </section>
+        <div class="filter-dropdown-container">
+            <label for="categoryFilter"><strong>Select Category: </strong></label>
+            <select id="categoryFilter" class="gallery-dropdown" onchange="filterSelection(this.value)">
+                <option value="all">Show All</option>
+                <option value="musallah">Musallah & Prayers</option>
+                <option value="events">Community Events</option>
+                <option value="education-children-play">Education and Children's Entertainment</option>
+            </select>
+        </div>
 
-    <section>
-        image    community events
-        image events ramadan
-        image   imam
-    </section>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="slide show, wide shot of int.png" style="width:100%">
+            <div class="caption-text">Main Musallah Hall</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="commy event slide show.png" style="width:100%">
+            <div class="caption-text">Community Gathering</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="slide show halaqa.png" style="width:100%">
+            <div class="caption-text">Weekly Halaqa after Jummah</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+        <a class="next" onclick="plusSlides(1)">&#10095</a>
+    </div>
+
+    <div class="row">
+
+        <div class="column filterDiv musallah">
+            <div class="content">
+                <img src="congregation prayer.png" alt="Main Musallah" onclick="openModal(this)">
+                <h4>Main Musallah</h4>
+                <p>Daily congregational prayers.</p>
+            </div>
+        </div>
+
+        <div class="column filterDiv musallah">
+            <div class="content">
+                <img src="taraweeh.png" alt="Taraweeh Night" onclick="openModal(this)">
+                <h4>Taraweeh Night</h4>
+                <p>Ramadan night prayers.</p>
+            </div>
+        </div>
+
+        <div class="column filterDiv events">
+            <div class="content">
+                <img src="community gathering.png" alt="Community Gatherings" onclick="openModal(this)">
+                <h4>Community Gatherings</h4>
+                <p>Bringing families together.</p>
+            </div>
+        </div>
+
+        <div class="column filterDiv events">
+            <div class="content">
+                <img src="iftar.png" alt="Ramadan Iftar" onclick="openModal(this)">
+                <h4>Ramadan Iftar</h4>
+                <p>Community breaking fast.</p>
+            </div>
+        </div>
+
+        <div class="column filterDiv education-children-play musallah">
+            <div class="content">
+                <img src="khutbah.png" alt="Jummah Prayer" onclick="openModal(this)">
+                <h4>Jummah Prayer</h4>
+                <p>Friday khutbah & gathering.</p>
+            </div>
+        </div>
+
+        <div class="column filterDiv education-children-play">
+            <div class="content">
+                <img src="kiddoss.png" alt="Children's Play Area" onclick="openModal(this)">
+                <h4>Children's Play Area</h4>
+                <p>Children playing in their area.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="imgModalTarget" alt="Enlarged view">
+        <div id="modalCaption"></div>
+    </div>
+
+    </main>
 
    <!--Footer-->
     <footer style="width: 100%; background-color: #062014; color: #ffffff; padding: 40px 0 20px 0; box-sizing: border-box; margin: 0;">
