@@ -155,9 +155,10 @@ body {
     color: #ffffff;
 }
 
+
 /*buttons*/
 .button {
-    background-color: gold;
+    background-color: #ebbc64b8;
     color: black;
     padding: 10px 20px;
     border-radius: 5px;
@@ -166,7 +167,7 @@ body {
 }
 
 .button:hover {
-    background-color: orange;
+    background-color: #dfb76c;
 }
 
 /*sections*/
@@ -190,14 +191,15 @@ h2 {
 table {
     width: 100%;
     max-width: 700px;
-    margin: 30px;
+    margin: 30px auto;
     border-collapse: collapse;
     box-shadow: 0 4px 12px rgba( 0, 0, 0, 0.05);
+    overflow: hidden;
     border-radius: 8px;
 }
 
 th {
-    background-color: darkgreen;
+    background-color: #0c3924;
     color: whitesmoke;
     padding: 16px;
     font-size: 1rem;
@@ -435,6 +437,7 @@ footer {
     margin-top: 20px;
 }
 
+
 /*mobile view*/
 @media (max-width: 768px) {
     nav a {
@@ -463,37 +466,43 @@ section img{
 
 /**accessibility feature**/
 
-.accessibility {
-    background-color: whitesmoke;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+.top-accessibility {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    margin-left: auto;
 }
 
-.accessibility h3 {
-    margin-top: 0;
-    color: #2e8b57;
-}
-
-.accessibility button {
-    background-color: #2e8b57;
-    color: whitesmoke;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 8px;
+.access-btn {
+    background-color: #0c3924;
+    color: #dfb76c;
+    border: 1px solid #dfb76c;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
     cursor: pointer;
-    margin-right: 10px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 2px 5px rgba( 0, 0, 0, 0.1);
 }
 
-.accessibility button:hover {
-    background-color: #1b5e20;
+.access-btn:hover {
+    background-color: #dfb76c;
+    color: #0c3924;
+    transform: translateY(-1px);
 }
+
 
 /**quick link layout style**/
 .quick-links-section {
     padding: 60px;
     background-color: #fcfbf7;
     text-align: center;
+    text-decoration: none;
 }
 
 .quick-links-intro {
@@ -506,7 +515,7 @@ section img{
 
 .link-btn-grid {
     display: flex;
-    justify-content: centre;
+    justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
     margin-top: 20px;
@@ -521,6 +530,7 @@ section img{
     border-radius: 6px;
     border: 2px solid #0c3924;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    text-decoration: none;
 }
 
 .link-btn:hover {
@@ -987,8 +997,9 @@ section img{
 
 .education-hub .content-container {
     max-width: 1100px;
-    margin: 0;
+    margin: 0 auto;
     padding: 0 20px;
+    align-items: center;
 }
 
 /**spotlight box**/
@@ -1068,6 +1079,7 @@ section img{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .info-card:hover {
@@ -1080,7 +1092,7 @@ section img{
     border-left: 4px solid #0c3924;
 }
 
-.haditd-card {
+.hadith-card {
     border-left: 4px solid #dfb76c;
 }
 
@@ -1117,6 +1129,8 @@ section img{
     margin: 0;
     font-style: italic;
 }
+
+
 
 /**mobile resposive adaptability**/
 @media (max-width: 768px) {
